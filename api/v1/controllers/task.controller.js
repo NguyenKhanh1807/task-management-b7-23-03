@@ -77,12 +77,12 @@ module.exports.changeStatus = async (req, res) => {
     });
 
     res.json({
-      code: 200,
+      code: 200, // cập nhật thành công sẽ trả về code 200, do mặc định của phần body-parser
       message: "Cập nhật trạng thái thành công!"
     });
   } catch (error) {
     res.json({
-      code: 400,
+      code: 400, // cập nhật thành công sẽ trả về code 400, do mặc định của phần body-parser
       message: "Không tồn tại!"
     });
   }
@@ -190,4 +190,4 @@ module.exports.delete = async (req, res) => {
       message: "Lỗi!"
     });
   }
-};
+}; // đối với trường hợp xóa nhiều sản phẩm thì thay đổi phần "key" trong phần change-multi thành "delete" là sẽ xóa được nhiều sản phẩm 
